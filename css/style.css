@@ -1,0 +1,35 @@
+main{
+    background-color: aliceblue;
+    height: 100%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.timer-container, .float-window{
+    max-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.result-container{
+    padding-top: 64px;
+    text-align: center;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}

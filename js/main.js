@@ -1,21 +1,26 @@
+let numeriDashboard = document.getElementById("numeri");
+let timerDashboard = document.getElementById("timer");
+let risultato =  document.getElementById("risultato");
+
 let randomNumArray = [];
 
 // Invocazione funzione che genera 5 numeri casuali
 randomNum();
 
-// invocazione timer 30 secondi
-timer(30);
+
 
 //Inserimento valori dell'utente
 let userArr = [];
 userInput();
 
 let arrIndex = 0;
-console.log("arr index fuori dal loop " + arrIndex);
+
+numeriDashboard.innerHTML = randomNumArray;
+risultato.append(userArr);
 
 //aprire ticket perché il risultato dell'array inizia a contare dall'indice 1
 while (userArr.includes(randomNumArray[arrIndex])){
-    arrIndex++;
+
     // console.log("Hai indovinato " + arrIndex);
 
     if(userArr.includes(randomNumArray[arrIndex])){
@@ -23,6 +28,8 @@ while (userArr.includes(randomNumArray[arrIndex])){
     }
 }
 
+// invocazione timer 30 secondi
+timer(30);
 
 
 
@@ -54,21 +61,7 @@ function timer(customTime){
 }
 
 
-//funzione numeri automatici
-function randomNum(){
 
-    while(randomNumArray.length < 5){
-        let random = Math.floor((Math.random() * 100) + 1);
-        if (!randomNumArray.includes(random)) {
-            //pusha il valore solo se non è presente nell'array
-            randomNumArray.push(random);
-          }
-    }
-    console.log(randomNumArray);
-
-    return randomNumArray;
-    
-};
 
 
 //funzione inserimento numeri
